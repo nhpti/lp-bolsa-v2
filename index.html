@@ -1,70 +1,77 @@
-<!doctype html> 
+<!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bolsa Família - Novo Horizonte Promotora</title>
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TLZ7BLSP');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TLZ7BLSP');</script>
   <!-- End Google Tag Manager -->
 
   <!-- Meta Pixel Code -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1352855813193625');
     fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=1352855813193625&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=1352855813193625&ev=PageView&noscript=1" />
   </noscript>
   <!-- End Meta Pixel Code -->
-   
+
   <link rel="icon" type="image/webp" href="img/Profile_NHP_Site.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       /* ===== PALETA MODERNA ===== */
-      --blue-900:#061a40;
-      --blue-800:#0a2463;
-      --blue-700:#0d47a1;
-      --blue-600:#1565c0;
-      --blue-400:#42a5f5;
-      --green:#25D366;
+      --blue-900: #0b2d69;
+      --blue-800: #114299;
+      --blue-700: #155bbb;
+      --blue-600: #1a73e8;
+      --blue-400: #42a5f5;
+      --green: #25D366;
 
       /* card/form */
       --card: rgba(10, 36, 99, .55);
-      --stroke: rgba(255,255,255,.15);
-      --fieldStroke: rgba(255,255,255,.12);
+      --stroke: rgba(255, 255, 255, .15);
+      --fieldStroke: rgba(255, 255, 255, .12);
 
       /* textos */
-      --text:#f0f6ff;
-      --muted:rgba(240,246,255,.78);
+      --text: #f0f6ff;
+      --muted: rgba(240, 246, 255, .78);
 
       /* destaque */
-      --yellow:#ffb300;
-      --yellow-glow: rgba(255,179,0,.35);
+      --yellow: #ffb300;
+      --yellow-glow: rgba(255, 179, 0, .35);
 
       /* CTA gradiente vibrante */
       --cta-from: #ffb300;
-      --cta-to:   #ff8f00;
+      --cta-to: #ff8f00;
 
-      --shadow:0 20px 50px rgba(0,0,0,.30);
+      --shadow: 0 20px 50px rgba(0, 0, 0, .30);
 
       /* bordas arredondadas */
       --radius: 20px;
@@ -72,712 +79,800 @@
       --radius-pill: 999px;
     }
 
-    *{ box-sizing:border-box; margin:0; padding:0; }
-
-    html{
-      scroll-behavior:smooth;
-      overflow-x:hidden;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    body{
-      margin:0;
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#ffffff;
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* ===== ANIMAÇÕES GLOBAIS ===== */
     @keyframes fadeInUp {
-      from { opacity:0; transform:translateY(30px); }
-      to   { opacity:1; transform:translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes shimmer {
-      0%   { background-position: -200% center; }
-      100% { background-position: 200% center; }
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
     }
 
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px var(--yellow-glow), 0 8px 30px rgba(0,0,0,.18); }
-      50%      { box-shadow: 0 0 35px var(--yellow-glow), 0 8px 30px rgba(0,0,0,.22); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px var(--yellow-glow), 0 8px 30px rgba(0, 0, 0, .18);
+      }
+
+      50% {
+        box-shadow: 0 0 35px var(--yellow-glow), 0 8px 30px rgba(0, 0, 0, .22);
+      }
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50%      { transform: translateY(-8px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
     }
 
-    @keyframes spin{
-      0%{ transform:rotate(0deg); }
-      100%{ transform:rotate(360deg); }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     /* =================== HEADER =================== */
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      padding:18px 15%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(0, 31, 63, 0.85);
-      backdrop-filter:blur(20px);
-      -webkit-backdrop-filter:blur(20px);
-      border-bottom:1px solid rgba(255,255,255,0.05);
-      box-shadow:0 4px 30px rgba(0,71,187,0.15);
-      transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 18px 15%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 31, 63, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 71, 187, 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .site-header.scrolled{
-      padding:12px 15%;
-      background:rgba(0, 20, 45, 0.95);
-      box-shadow:0 8px 40px rgba(0,71,187,0.25);
+    .site-header.scrolled {
+      padding: 12px 15%;
+      background: rgba(0, 20, 45, 0.95);
+      box-shadow: 0 8px 40px rgba(0, 71, 187, 0.25);
     }
 
-    .header-inner{
-      width:min(1400px, 100%);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
+    .header-inner {
+      width: min(1400px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .header-logo{
-      display:flex;
-      align-items:center;
-      text-decoration:none;
+    .header-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
     }
 
-    .header-logo img{
-      height:70px;
-      width:auto;
-      display:block;
-      transition:transform 0.3s ease;
+    .header-logo img {
+      height: 70px;
+      width: auto;
+      display: block;
+      transition: transform 0.3s ease;
     }
 
-    .header-logo:hover img{
-      transform:scale(1.05);
+    .header-logo:hover img {
+      transform: scale(1.05);
     }
 
-    .header-nav{
-      display:flex;
-      align-items:center;
-      gap:8px;
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .header-nav a{
-      color:rgba(255,255,255,0.9);
-      text-decoration:none;
-      font-size:16px;
-      font-weight:600;
-      padding:10px 20px;
-      position:relative;
-      transition:color 0.3s ease;
+    .header-nav a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px 20px;
+      position: relative;
+      transition: color 0.3s ease;
     }
 
-    .header-nav a:not(.nav-cta)::after{
-      content:'';
-      position:absolute;
-      bottom:0;
-      left:50%;
-      transform:translateX(-50%) scaleX(0);
-      width:60%;
-      height:2px;
-      background:#25D366;
-      transition:transform 0.3s ease;
-      border-radius:1px;
+    .header-nav a:not(.nav-cta)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 60%;
+      height: 2px;
+      background: #25D366;
+      transition: transform 0.3s ease;
+      border-radius: 1px;
     }
 
-    .header-nav a:not(.nav-cta):hover{
-      color:#ffffff;
+    .header-nav a:not(.nav-cta):hover {
+      color: #ffffff;
     }
 
-    .header-nav a:not(.nav-cta):hover::after{
-      transform:translateX(-50%) scaleX(1);
+    .header-nav a:not(.nav-cta):hover::after {
+      transform: translateX(-50%) scaleX(1);
     }
 
-    .header-nav a.nav-cta{
-      color:#ffffff;
-      background:#25D366;
-      font-weight:800;
-      font-size:16px;
-      padding:16px 28px;
-      margin-left:12px;
-      border-radius:14px;
-      box-shadow:0 4px 20px rgba(37,211,102,0.3);
-      border:none;
-      transition:all 0.3s ease;
+    .header-nav a.nav-cta {
+      color: #ffffff;
+      background: #25D366;
+      font-weight: 800;
+      font-size: 16px;
+      padding: 16px 28px;
+      margin-left: 12px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+      border: none;
+      transition: all 0.3s ease;
     }
 
-    .header-nav a.nav-cta:hover{
-      background:#1fb855;
-      transform:translateY(-2px);
-      box-shadow:0 8px 30px rgba(37,211,102,0.4);
+    .header-nav a.nav-cta:hover {
+      background: #1fb855;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
     }
 
 
 
     /* =================== PÁGINA 1 =================== */
-    .page1{
-      padding-top: 28px; /* header é sticky, não precisa de espaço extra */
-      background: linear-gradient(
-        135deg,
-        var(--blue-900) 0%,
-        var(--blue-800) 30%,
-        var(--blue-700) 60%,
-        var(--blue-600) 100%
-      );
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:safe center;
-      justify-content:center;
-      padding:28px;
-      position:relative;
-      overflow:hidden;
+    .page1 {
+      padding-top: 28px;
+      /* header é sticky, não precisa de espaço extra */
+      background: linear-gradient(135deg,
+          var(--blue-900) 0%,
+          var(--blue-800) 30%,
+          var(--blue-700) 60%,
+          var(--blue-600) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: safe center;
+      justify-content: center;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .page1::before{
-      content:"";
-      position:absolute;
-      inset:0;
+    .page1::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background-image: url("img/Fundo_NHP_Desktop.webp");
       background-repeat: no-repeat;
       background-size: 130% auto;
       background-position: center;
       opacity: 0.12;
-      z-index:0;
+      z-index: 0;
     }
 
     /* partículas decorativas */
-    .page1::after{
-      content:"";
-      position:absolute;
+    .page1::after {
+      content: "";
+      position: absolute;
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(30,136,229,.25) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(30, 136, 229, .25) 0%, transparent 70%);
       top: -200px;
       right: -100px;
-      z-index:0;
+      z-index: 0;
       animation: float 6s ease-in-out infinite;
     }
 
-    .page1 > *{
-      position:relative;
-      z-index:1;
+    .page1>* {
+      position: relative;
+      z-index: 1;
     }
 
-    .wrap{
-      width:min(1180px, 100%);
-      display:grid;
-      grid-template-columns: 1fr 480px;
-      gap:72px;
-      align-items:center;
+    .wrap {
+      width: min(1180px, 100%);
+      display: grid;
+      grid-template-columns: 1fr 560px;
+      gap: 72px;
+      align-items: center;
     }
 
     /* ===== CARD COM GLASSMORPHISM ===== */
-    .card{
+    .card {
       background: var(--card);
-      border:1px solid var(--stroke);
+      border: 1px solid var(--stroke);
       border-radius: var(--radius);
-      padding:36px 32px;
+      padding: 36px 32px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       animation: fadeInUp .7s ease-out both;
     }
 
-    .brand-logo{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:16px;
-      margin-bottom:18px;
-    }
-    .brand-logo img{
-      height:auto;
-      display:block;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,.22));
-    }
-    .brand-logo .logo-nhp{
-      width:min(180px, 50%);
-    }
-    .brand-logo .logo-bolsa{
-      display:none;
-      border-radius:8px;
+    .brand-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
     }
 
-    h1{
-      margin:0 0 10px;
-      font-size:26px;
-      font-weight:900;
-      line-height:1.22;
+    .brand-logo img {
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .22));
+    }
+
+    .brand-logo .logo-nhp {
+      width: min(180px, 50%);
+    }
+
+    .brand-logo .logo-bolsa {
+      display: none;
+      border-radius: 8px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1.22;
       color: var(--text);
-      letter-spacing:-.3px;
+      letter-spacing: -.3px;
     }
 
-    .hl{
-      color:var(--yellow);
-      white-space:nowrap;
-      position:relative;
+    .hl {
+      color: var(--yellow);
+      white-space: nowrap;
+      position: relative;
     }
 
-    .sub{
-      font-size:14px;
-      margin-bottom:24px;
-      color:var(--muted);
-      line-height:1.5;
+    .sub {
+      font-size: 14px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      line-height: 1.5;
     }
 
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     /* ===== INPUTS MODERNOS ===== */
-    input{
-      padding:16px 18px;
+    input {
+      padding: 16px 18px;
       border-radius: var(--radius-sm);
-      border:1px solid var(--fieldStroke);
+      border: 1px solid var(--fieldStroke);
       background: rgba(6, 26, 64, .45);
-      color:white;
-      font-size:15px;
+      color: white;
+      font-size: 15px;
       font-family: inherit;
-      outline:none;
+      outline: none;
       transition: all .3s ease;
     }
 
-    input::placeholder{
-      color:rgba(240,246,255,.45);
+    input::placeholder {
+      color: rgba(240, 246, 255, .45);
     }
 
-    input:focus{
+    input:focus {
       border-color: var(--blue-400);
       background: rgba(6, 26, 64, .6);
-      box-shadow: 0 0 0 4px rgba(30,136,229,.2), 0 0 20px rgba(30,136,229,.1);
+      box-shadow: 0 0 0 4px rgba(30, 136, 229, .2), 0 0 20px rgba(30, 136, 229, .1);
       transform: translateY(-1px);
     }
 
     /* ===== GRUPO WHATSAPP (SPLIT) ===== */
-    .phone-group{
-      display:flex;
-      gap:8px;
-      align-items:center;
+    .phone-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
-    .phone-prefix{
-      padding:16px 14px;
+
+    .phone-prefix {
+      padding: 16px 14px;
       border-radius: var(--radius-sm);
-      border:1px solid var(--fieldStroke);
+      border: 1px solid var(--fieldStroke);
       background: rgba(6, 26, 64, .55);
-      color:rgba(240,246,255,.65);
-      font-size:15px;
+      color: rgba(240, 246, 255, .65);
+      font-size: 15px;
       font-family: inherit;
-      white-space:nowrap;
-      user-select:none;
-      pointer-events:none;
-      min-width:58px;
-      text-align:center;
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      min-width: 58px;
+      text-align: center;
     }
-    .phone-group input{
-      flex:1;
-      min-width:0;
+
+    .phone-group input {
+      flex: 1;
+      min-width: 0;
     }
-    #ddd{
-      max-width:80px;
-      text-align:center;
+
+    #ddd {
+      max-width: 80px;
+      text-align: center;
     }
 
     /* ===== BOTÃO CTA PRINCIPAL - AMARELO CHAMATIVO ===== */
-    .cta{
-      margin-top:10px;
-      padding:18px 24px;
+    .cta {
+      margin-top: 10px;
+      padding: 18px 24px;
       border-radius: var(--radius-pill);
-      border:none;
-      cursor:pointer;
-      font-weight:900;
-      font-size:17px;
+      border: none;
+      cursor: pointer;
+      font-weight: 900;
+      font-size: 17px;
       font-family: inherit;
-      letter-spacing:.3px;
-      text-transform:uppercase;
+      letter-spacing: .3px;
+      text-transform: uppercase;
       color: var(--blue-900);
       background: linear-gradient(135deg, var(--cta-from), var(--cta-to));
-      box-shadow: 0 8px 30px rgba(255,179,0,.3), 0 2px 8px rgba(0,0,0,.1);
-      transition: all .35s cubic-bezier(.4,0,.2,1);
-      position:relative;
-      overflow:hidden;
+      box-shadow: 0 8px 30px rgba(255, 179, 0, .3), 0 2px 8px rgba(0, 0, 0, .1);
+      transition: all .35s cubic-bezier(.4, 0, .2, 1);
+      position: relative;
+      overflow: hidden;
     }
 
-    .cta::before{
-      content:"";
-      position:absolute;
-      top:0; left:-100%;
-      width:200%;
-      height:100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+    .cta::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .25), transparent);
       animation: shimmer 3s infinite;
     }
 
-    .cta:hover{
+    .cta:hover {
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 12px 40px rgba(255,179,0,.4), 0 4px 12px rgba(0,0,0,.15);
+      box-shadow: 0 12px 40px rgba(255, 179, 0, .4), 0 4px 12px rgba(0, 0, 0, .15);
     }
 
-    .cta:active{
+    .cta:active {
       transform: translateY(0) scale(.98);
     }
 
-    .cta:disabled{
+    .cta:disabled {
       opacity: 0.6;
       cursor: not-allowed;
       transform: none;
       animation: none;
     }
 
-    .cta:disabled::before{
+    .cta:disabled::before {
       animation: none;
     }
 
-    .fineprint{
-      margin-top:16px;
-      font-size:10px;
-      line-height:1.5;
-      color: rgba(240,246,255,.55);
+    .fineprint {
+      margin-top: 16px;
+      font-size: 10px;
+      line-height: 1.5;
+      color: rgba(240, 246, 255, .55);
     }
 
     /* ===== LOADER E MENSAGENS ===== */
-    .loader-container{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      padding:50px 20px;
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
       animation: fadeInUp .5s ease-out both;
     }
 
-    .loader{
-      border:5px solid rgba(255,255,255,.15);
-      border-top:5px solid var(--yellow);
-      border-radius:50%;
-      width:56px;
-      height:56px;
-      animation:spin .8s linear infinite;
-      margin-bottom:24px;
+    .loader {
+      border: 5px solid rgba(255, 255, 255, .15);
+      border-top: 5px solid var(--yellow);
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      animation: spin .8s linear infinite;
+      margin-bottom: 24px;
     }
 
-    .message-container{
-      text-align:center;
-      padding:30px 20px;
+    .message-container {
+      text-align: center;
+      padding: 30px 20px;
       animation: fadeInUp .5s ease-out both;
     }
 
-    .message-icon{
-      font-size:64px;
-      margin-bottom:20px;
+    .message-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
       animation: float 3s ease-in-out infinite;
     }
 
-    .message-title{
-      font-size:28px;
-      font-weight:900;
-      margin:0 0 15px;
-      line-height:1.2;
+    .message-title {
+      font-size: 28px;
+      font-weight: 900;
+      margin: 0 0 15px;
+      line-height: 1.2;
     }
 
-    .message-text{
-      font-size:15px;
-      line-height:1.6;
-      color:var(--muted);
-      margin:0 0 10px;
+    .message-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 10px;
     }
 
-    .status-online{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 18px;
-      background:rgba(40,167,69,.12);
-      border:1px solid rgba(40,167,69,.25);
+    .status-online {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(40, 167, 69, .12);
+      border: 1px solid rgba(40, 167, 69, .25);
       border-radius: var(--radius-pill);
-      color:#4caf50;
-      font-weight:700;
-      font-size:14px;
-      margin-top:15px;
+      color: #4caf50;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 15px;
       animation: pulse-glow 2s ease-in-out infinite;
-      --yellow-glow: rgba(76,175,80,.3);
+      --yellow-glow: rgba(76, 175, 80, .3);
     }
 
-    .status-offline{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 18px;
-      background:rgba(255,152,0,.12);
-      border:1px solid rgba(255,152,0,.25);
+    .status-offline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 152, 0, .12);
+      border: 1px solid rgba(255, 152, 0, .25);
       border-radius: var(--radius-pill);
-      color:#ff9800;
-      font-weight:700;
-      font-size:14px;
-      margin-top:15px;
+      color: #ff9800;
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 15px;
     }
 
-    .whatsapp-img{
-      width:60px;
-      height:60px;
-      margin:20px auto;
-      display:block;
+    .whatsapp-img {
+      width: 60px;
+      height: 60px;
+      margin: 20px auto;
+      display: block;
       animation: float 3s ease-in-out infinite;
     }
 
-    .hero{
-      display:flex;
-      justify-content:center;
-      align-items:center;
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .hero img{
-      max-width:100%;
-      height:auto;
-      display:block;
-      border-radius:0;
-      box-shadow:none;
-      filter: drop-shadow(0 20px 50px rgba(0,0,0,.28));
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+      box-shadow: none;
+      filter: drop-shadow(0 20px 50px rgba(0, 0, 0, .28));
       animation: fadeInUp .8s ease-out both;
       animation-delay: .2s;
     }
 
     /* =================== PÁGINA 2 =================== */
-    .page2{
+    .page2 {
       padding: 100px 0 0;
       background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
-      color:#111827;
-      min-height:100vh;
-      position:relative;
-      overflow:hidden;
+      color: #111827;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
     }
 
-    .page2::before{
-      content:"";
-      position:absolute;
-      inset:0;
+    .page2::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background-image: url("img/Fundo_NHP_Desktop2.webp");
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
       background-size: 130% auto;
-      background-position:center;
+      background-position: center;
       opacity: 0.08;
-      z-index:0;
+      z-index: 0;
     }
 
-    .page2 > *{
-      position:relative;
-      z-index:1;
+    .page2>* {
+      position: relative;
+      z-index: 1;
     }
 
-    .page2-inner{
-      width:min(1100px, 100%);
-      margin:0 auto;
+    .page2-inner {
+      width: min(1100px, 100%);
+      margin: 0 auto;
       padding: 0 28px;
-      position:relative;
-      z-index:1;
+      position: relative;
+      z-index: 1;
     }
 
-    .page2-grid{
-      display:grid;
+    .page2-grid {
+      display: grid;
       grid-template-columns: 1fr;
-      gap:0;
-      justify-items:center;
-      text-align:center;
+      gap: 0;
+      justify-items: center;
+      text-align: center;
     }
 
-    .p2-content{
-      width:min(740px, 100%);
+    .p2-content {
+      width: min(740px, 100%);
     }
 
-    .p2-title{
-      font-size:46px;
-      line-height:1.05;
-      margin:0 0 12px;
-      letter-spacing:-.8px;
-      font-weight:900;
+    .p2-title {
+      font-size: 46px;
+      line-height: 1.05;
+      margin: 0 0 12px;
+      letter-spacing: -.8px;
+      font-weight: 900;
       color: var(--blue-800);
       animation: fadeInUp .6s ease-out both;
     }
 
-    .p2-sub{
-      margin:0 0 28px;
-      color:#64748b;
-      font-size:17px;
-      line-height:1.6;
-      max-width:740px;
+    .p2-sub {
+      margin: 0 0 28px;
+      color: #64748b;
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 740px;
       animation: fadeInUp .6s ease-out both;
-      animation-delay:.1s;
+      animation-delay: .1s;
     }
 
-    .reqs{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
+    .reqs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .reqs li{
-      display:flex;
-      gap:14px;
-      align-items:center;
-      padding:18px 20px;
+    .reqs li {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 18px 20px;
       border-radius: var(--radius);
-      background: rgba(255,255,255,.85);
-      border: 1px solid rgba(10,36,99,.06);
-      box-shadow: 0 4px 20px rgba(10,36,99,.06);
+      background: rgba(255, 255, 255, .85);
+      border: 1px solid rgba(10, 36, 99, .06);
+      box-shadow: 0 4px 20px rgba(10, 36, 99, .06);
       backdrop-filter: blur(8px);
-      text-align:left;
+      text-align: left;
       transition: all .3s ease;
       animation: fadeInUp .5s ease-out both;
     }
 
-    .reqs li:nth-child(1){ animation-delay:.15s; }
-    .reqs li:nth-child(2){ animation-delay:.25s; }
-    .reqs li:nth-child(3){ animation-delay:.35s; }
-    .reqs li:nth-child(4){ animation-delay:.45s; }
+    .reqs li:nth-child(1) {
+      animation-delay: .15s;
+    }
 
-    .reqs li:hover{
+    .reqs li:nth-child(2) {
+      animation-delay: .25s;
+    }
+
+    .reqs li:nth-child(3) {
+      animation-delay: .35s;
+    }
+
+    .reqs li:nth-child(4) {
+      animation-delay: .45s;
+    }
+
+    .reqs li:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(10,36,99,.1);
-      border-color: rgba(30,136,229,.2);
+      box-shadow: 0 8px 30px rgba(10, 36, 99, .1);
+      border-color: rgba(30, 136, 229, .2);
     }
 
-    .check{
-      width:32px;
-      height:32px;
-      border-radius:10px;
-      background: linear-gradient(135deg, rgba(76,175,80,.15), rgba(76,175,80,.08));
-      border: 1px solid rgba(76,175,80,.2);
-      display:grid;
-      place-items:center;
-      flex:0 0 auto;
+    .check {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(76, 175, 80, .15), rgba(76, 175, 80, .08));
+      border: 1px solid rgba(76, 175, 80, .2);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
       color: #4caf50;
-      font-weight:900;
-      font-size:15px;
+      font-weight: 900;
+      font-size: 15px;
     }
 
-    .req-text{
-      color:#1e293b;
-      font-size:16px;
-      line-height:1.45;
+    .req-text {
+      color: #1e293b;
+      font-size: 16px;
+      line-height: 1.45;
     }
 
-    .req-text strong{
-      font-weight:800;
+    .req-text strong {
+      font-weight: 800;
       color: var(--blue-700);
     }
 
-    .trust-row{
-      margin-top:28px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
+    .trust-row {
+      margin-top: 48px;
+      margin-bottom: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      width: 100%;
     }
 
-    .trust-pill{
-      padding:10px 16px;
-      border-radius: var(--radius-pill);
-      background: linear-gradient(135deg, rgba(30,136,229,.08), rgba(30,136,229,.04));
-      border: 1px solid rgba(30,136,229,.15);
-      color: var(--blue-700);
-      font-weight:700;
-      font-size:13px;
-      backdrop-filter: blur(4px);
-      transition: all .3s ease;
+    .trust-card {
+      background: #ffffff;
+      border: 1px solid rgba(10, 36, 99, .06);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: left;
+      box-shadow: 0 8px 30px rgba(10, 36, 99, .04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .trust-pill:hover{
-      background: linear-gradient(135deg, rgba(30,136,229,.15), rgba(30,136,229,.08));
-      transform: translateY(-2px);
+    .trust-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(10, 36, 99, .08);
+      border-color: rgba(30, 136, 229, .2);
+    }
+
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(30, 136, 229, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-600);
+    }
+
+    .trust-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .trust-card h4 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--blue-800);
+      margin: 0;
+    }
+
+    .trust-card p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.5;
     }
 
     /* ===== CTA SECTION ===== */
-    .p2-cta{
-      width:min(980px, 100%);
-      margin:80px auto 80px;
+    .p2-cta {
+      width: min(980px, 100%);
+      margin: 80px auto 80px;
       background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-900) 100%);
       border-radius: 28px;
-      padding:56px 36px;
-      text-align:center;
-      box-shadow: 0 24px 60px rgba(6,26,64,.25);
-      border:1px solid rgba(255,255,255,.08);
-      position:relative;
-      overflow:hidden;
+      padding: 56px 36px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(6, 26, 64, .25);
+      border: 1px solid rgba(255, 255, 255, .08);
+      position: relative;
+      overflow: hidden;
     }
 
-    .p2-cta::before{
-      content:"";
-      position:absolute;
-      width:400px; height:400px;
-      border-radius:50%;
-      background: radial-gradient(circle, rgba(255,179,0,.12) 0%, transparent 70%);
-      top:-100px; right:-100px;
-      z-index:0;
+    .p2-cta::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 179, 0, .12) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      z-index: 0;
     }
 
-    .p2-cta h3{
-      margin:0 0 12px;
-      font-size:42px;
-      line-height:1.1;
-      color:#ffffff;
-      letter-spacing:-.6px;
-      font-weight:900;
-      position:relative;
-      z-index:1;
+    .p2-cta h3 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      line-height: 1.1;
+      color: #ffffff;
+      letter-spacing: -.6px;
+      font-weight: 900;
+      position: relative;
+      z-index: 1;
     }
 
-    .p2-cta p{
-      margin:0 0 28px;
-      color: rgba(240,246,255,.85);
-      font-size:17px;
-      line-height:1.55;
-      position:relative;
-      z-index:1;
+    .p2-cta p {
+      margin: 0 0 28px;
+      color: rgba(240, 246, 255, .85);
+      font-size: 17px;
+      line-height: 1.55;
+      position: relative;
+      z-index: 1;
     }
 
-    .p2-cta a{
-      position:relative;
-      z-index:1;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:18px 36px;
+    .p2-cta a {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 36px;
       border-radius: var(--radius-pill);
-      text-decoration:none;
-      font-weight:900;
-      font-size:16px;
-      letter-spacing:.5px;
-      text-transform:uppercase;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
       color: var(--blue-900);
       background: linear-gradient(135deg, var(--cta-from), var(--cta-to));
-      box-shadow: 0 8px 30px rgba(255,179,0,.3), 0 2px 8px rgba(0,0,0,.1);
-      transition: all .35s cubic-bezier(.4,0,.2,1);
-      overflow:hidden;
+      box-shadow: 0 8px 30px rgba(255, 179, 0, .3), 0 2px 8px rgba(0, 0, 0, .1);
+      transition: all .35s cubic-bezier(.4, 0, .2, 1);
+      overflow: hidden;
     }
 
-    .p2-cta a::before{
-      content:"";
-      position:absolute;
-      top:0; left:-100%;
-      width:200%;
-      height:100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+    .p2-cta a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .25), transparent);
       animation: shimmer 3s infinite;
     }
 
-    .p2-cta a:hover{
+    .p2-cta a:hover {
       transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 14px 40px rgba(255,179,0,.4), 0 4px 12px rgba(0,0,0,.15);
+      box-shadow: 0 14px 40px rgba(255, 179, 0, .4), 0 4px 12px rgba(0, 0, 0, .15);
     }
 
     /* ======================================================
@@ -809,7 +904,7 @@
       width: 100%;
       height: 100%;
       background: radial-gradient(circle at 20% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 80%, rgba(0, 102, 255, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(0, 102, 255, 0.08) 0%, transparent 50%);
       pointer-events: none;
       z-index: 0;
     }
@@ -955,133 +1050,220 @@
     }
 
     /* ===== RESPONSIVO ===== */
-    @media (max-width: 980px){
+    @media (max-width: 980px) {
+
       /* Header mobile */
-      .site-header{ padding: 12px 16px; }
-      .header-logo img{ height:45px; }
-      .header-nav{ display:none; }
+      .site-header {
+        padding: 12px 16px;
+      }
+
+      .header-logo img {
+        height: 45px;
+      }
+
+      .header-nav {
+        display: none;
+      }
 
       /* page1 preenche a tela */
-      .page1{
-        padding:12px;
-        min-height:100vh;
-        min-height:100dvh;
-        flex-direction:column;
+      .page1 {
+        padding: 12px;
+        min-height: 100vh;
+        min-height: 100dvh;
+        flex-direction: column;
       }
 
       /* wrap vira flex column pra card poder crescer */
-      .wrap{
-        display:flex;
-        flex-direction:column;
-        flex:1;
-        width:100%;
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
       }
-      
-      .hero{ 
+
+      .hero {
         display: none;
       }
 
       /* card cresce pra preencher o espaço, conteúdo centralizado */
-      .card{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         padding: 28px 22px;
         border-radius: 18px;
-        margin: auto 0;
+        margin: auto;
+        width: calc(100% - 32px);
       }
 
-      .page1::before{ background-size: auto 120%; }
-      .hl{ white-space:normal; }
-
-      .brand-logo{ gap:12px; margin-bottom:16px; }
-      .brand-logo .logo-nhp{ width:min(150px, 45%); }
-      .brand-logo .logo-bolsa{ display:block; width:min(60px, 18%); }
-
-      h1{
-        font-size:21px;
-        text-align:center;
-        margin-bottom:8px;
+      .page1::before {
+        background-size: auto 120%;
       }
 
-      .sub{
-        font-size:13px;
-        text-align:center;
-        margin-bottom:18px;
+      .hl {
+        white-space: normal;
       }
 
-      form{ gap:12px; }
-
-      input{
-        padding:14px 16px;
-        font-size:15px;
+      .brand-logo {
+        gap: 12px;
+        margin-bottom: 16px;
       }
 
-      .phone-prefix{
-        padding:14px 12px;
-        font-size:15px;
-        min-width:54px;
+      .brand-logo .logo-nhp {
+        width: min(150px, 45%);
       }
 
-      .phone-group{ gap:8px; }
-
-      #ddd{ max-width:75px; }
-
-      .cta{
-        font-size:16px;
-        padding:16px 20px;
-        margin-top:8px;
+      .brand-logo .logo-bolsa {
+        display: block;
+        width: min(60px, 18%);
       }
 
-      .fineprint{
-        text-align:center;
-        font-size:9px;
-        margin-top:12px;
+      h1 {
+        font-size: 21px;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+
+      .sub {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+
+      form {
+        gap: 12px;
+      }
+
+      input {
+        padding: 14px 16px;
+        font-size: 15px;
+      }
+
+      .phone-prefix {
+        padding: 14px 12px;
+        font-size: 15px;
+        min-width: 54px;
+      }
+
+      .phone-group {
+        gap: 8px;
+      }
+
+      #ddd {
+        max-width: 75px;
+      }
+
+      .cta {
+        font-size: 16px;
+        padding: 16px 20px;
+        margin-top: 8px;
+      }
+
+      .fineprint {
+        text-align: center;
+        font-size: 9px;
+        margin-top: 12px;
       }
 
       /* Page 2 mobile */
-      .page2{ padding: 56px 0 0; }
-      .page2-inner{ padding: 0 16px; }
-      .p2-title{ font-size:30px; letter-spacing:-.4px; }
-      .p2-sub{ font-size:15px; }
-
-      .reqs li{
-        padding:16px;
-        border-radius:16px;
+      .page2 {
+        padding: 56px 0 0;
       }
 
-      .req-text{ font-size:15px; }
-
-      .trust-row{ gap:8px; }
-      .trust-pill{ font-size:12px; padding:8px 14px; }
-
-      .p2-cta{
-        margin-top:48px;
-        padding:36px 20px;
-        border-radius:22px;
+      .page2-inner {
+        padding: 0 16px;
       }
-      .p2-cta h3{ font-size:26px; }
-      .p2-cta p{ font-size:15px; }
-      .p2-cta a{ font-size:14px; padding:16px 28px; }
+
+      .p2-title {
+        font-size: 30px;
+        letter-spacing: -.4px;
+      }
+
+      .p2-sub {
+        font-size: 15px;
+      }
+
+      .reqs li {
+        padding: 16px;
+        border-radius: 16px;
+      }
+
+      .req-text {
+        font-size: 15px;
+      }
+
+      .trust-row {
+        gap: 16px;
+        margin-bottom: 60px;
+        grid-template-columns: 1fr;
+      }
+
+      .p2-cta {
+        margin-top: 48px;
+        padding: 36px 20px;
+        border-radius: 22px;
+      }
+
+      .p2-cta h3 {
+        font-size: 26px;
+      }
+
+      .p2-cta p {
+        font-size: 15px;
+      }
+
+      .p2-cta a {
+        font-size: 14px;
+        padding: 16px 28px;
+      }
 
       /* Footer mobile */
-      footer { padding: 50px 6% 25px; }
-      .footer-content { grid-template-columns: 1fr; gap: 40px; margin-bottom: 40px; }
-      .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+      footer {
+        padding: 50px 6% 25px;
+      }
 
-      .page2::before{
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .page2::before {
         background-size: auto 120%;
       }
     }
 
     /* Extra small screens */
-    @media (max-width: 380px){
-      .site-header{ padding: 10px 12px; }
-      .header-logo img{ height:38px; }
-      h1{ font-size:20px; }
-      .p2-title{ font-size:26px; }
-      .p2-cta h3{ font-size:24px; }
-      .card{ padding: 24px 16px; }
+    @media (max-width: 380px) {
+      .site-header {
+        padding: 10px 12px;
+      }
+
+      .header-logo img {
+        height: 38px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .p2-title {
+        font-size: 26px;
+      }
+
+      .p2-cta h3 {
+        font-size: 24px;
+      }
+
+      .card {
+        padding: 24px 16px;
+      }
     }
 
     /* ============================================
@@ -1121,12 +1303,19 @@
       width: 100%;
       height: 100%;
       overflow: visible;
-      filter: drop-shadow(0 0 6px rgba(255,0,0,0.5));
+      filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.5));
     }
 
     @keyframes bounceUpArrow {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
     }
 
     /* Topo do overlay */
@@ -1137,7 +1326,7 @@
       flex-direction: column;
       align-items: center;
       padding-bottom: 0;
-      box-shadow: 0 4px 20px rgba(0,50,160,0.25);
+      box-shadow: 0 4px 20px rgba(0, 50, 160, 0.25);
       position: relative;
       z-index: 2;
     }
@@ -1145,13 +1334,11 @@
     /* Faixa de perigo estilo construção */
     .danger-stripe {
       width: 100%;
-      background: repeating-linear-gradient(
-        -45deg,
-        #ffd000,
-        #ffd000 12px,
-        #1a1a1a 12px,
-        #1a1a1a 22px
-      );
+      background: repeating-linear-gradient(-45deg,
+          #ffd000,
+          #ffd000 12px,
+          #1a1a1a 12px,
+          #1a1a1a 22px);
       padding: 12px 16px;
       text-align: center;
     }
@@ -1163,7 +1350,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 4px 16px rgba(255,200,0,0.35);
+      box-shadow: 0 4px 16px rgba(255, 200, 0, 0.35);
     }
 
     .warning-triangle {
@@ -1193,7 +1380,7 @@
       padding: 14px 16px;
       background: linear-gradient(180deg, var(--blue-700) 0%, var(--blue-800) 100%);
       width: 100%;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     .overlay-subtitle .yellow {
@@ -1242,7 +1429,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 16px rgba(29,185,84,0.5), 0 0 0 3px rgba(29,185,84,0.2);
+      box-shadow: 0 4px 16px rgba(29, 185, 84, 0.5), 0 0 0 3px rgba(29, 185, 84, 0.2);
       position: relative;
       z-index: 3;
       margin-bottom: -14px;
@@ -1257,8 +1444,8 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
-      box-shadow: 0 6px 24px rgba(0,40,160,0.3), 0 2px 6px rgba(0,0,0,0.08);
-      border: 1px solid rgba(0,60,200,0.15);
+      box-shadow: 0 6px 24px rgba(0, 40, 160, 0.3), 0 2px 6px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 60, 200, 0.15);
     }
 
     .step-card-col {
@@ -1270,8 +1457,8 @@
       flex-direction: column;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 6px 24px rgba(0,40,160,0.3), 0 2px 6px rgba(0,0,0,0.08);
-      border: 1px solid rgba(0,60,200,0.15);
+      box-shadow: 0 6px 24px rgba(0, 40, 160, 0.3), 0 2px 6px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 60, 200, 0.15);
     }
 
     .step-main-text {
@@ -1288,7 +1475,7 @@
       color: #ffd000;
       font-weight: 900;
       display: block;
-      text-shadow: 0 1px 8px rgba(255,208,0,0.4);
+      text-shadow: 0 1px 8px rgba(255, 208, 0, 0.4);
     }
 
     .tres-pontos-img {
@@ -1316,12 +1503,12 @@
       text-transform: uppercase;
       letter-spacing: 0.02em;
       text-align: center;
-      text-shadow: 0 2px 10px rgba(255,208,0,0.45);
+      text-shadow: 0 2px 10px rgba(255, 208, 0, 0.45);
     }
 
     .support-text {
       font-size: 15px;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
       font-weight: 500;
       font-style: italic;
       line-height: 1.4;
@@ -1337,7 +1524,7 @@
       padding: 8px 20px;
       background: #fff;
       border-radius: 30px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
       border: 1px solid #e0e6ef;
     }
 
@@ -1403,15 +1590,25 @@
     }
 
     @keyframes pulseWarn {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.015); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.85;
+        transform: scale(1.015);
+      }
     }
   </style>
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLZ7BLSP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLZ7BLSP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- =============================================
@@ -1423,8 +1620,9 @@
       <div class="danger-stripe">
         <div class="danger-stripe-inner">
           <svg class="warning-triangle" viewBox="0 0 48 48" fill="none">
-            <path d="M24 4L2 44h44L24 4z" fill="#ffd000" stroke="#1a1a1a" stroke-width="3"/>
-            <text x="24" y="38" text-anchor="middle" font-size="26" font-weight="900" fill="#1a1a1a" font-family="sans-serif">!</text>
+            <path d="M24 4L2 44h44L24 4z" fill="#ffd000" stroke="#1a1a1a" stroke-width="3" />
+            <text x="24" y="38" text-anchor="middle" font-size="26" font-weight="900" fill="#1a1a1a"
+              font-family="sans-serif">!</text>
           </svg>
           <h2>LEIA COM ATENÇÃO</h2>
         </div>
@@ -1443,9 +1641,10 @@
           </div>
           <div class="corner-arrow">
             <svg viewBox="0 0 50 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 270 L18 270 Q32 270 32 256 L32 12" stroke="#ff0000" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <path d="M32 12 L20 35" stroke="#ff0000" stroke-width="10" stroke-linecap="round"/>
-              <path d="M32 12 L44 35" stroke="#ff0000" stroke-width="10" stroke-linecap="round"/>
+              <path d="M5 270 L18 270 Q32 270 32 256 L32 12" stroke="#ff0000" stroke-width="10" stroke-linecap="round"
+                stroke-linejoin="round" fill="none" />
+              <path d="M32 12 L20 35" stroke="#ff0000" stroke-width="10" stroke-linecap="round" />
+              <path d="M32 12 L44 35" stroke="#ff0000" stroke-width="10" stroke-linecap="round" />
             </svg>
           </div>
         </div>
@@ -1463,13 +1662,14 @@
         </div>
 
         <!-- Logo -->
-        <img src="img/logo_horizontal_azul.png" alt="Novo Horizonte Promotora" style="max-width:340px; margin-top:22px;" />
+        <img src="img/logo_horizontal_azul.png" alt="Novo Horizonte Promotora"
+          style="max-width:340px; margin-top:22px;" />
 
         <!-- Badge de credibilidade -->
         <div class="credibility-badge">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#1a8a4a"/>
-            <path d="M10 15.5l-3.5-3.5 1.41-1.41L10 12.67l5.59-5.59L17 8.5l-7 7z" fill="#fff"/>
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#1a8a4a" />
+            <path d="M10 15.5l-3.5-3.5 1.41-1.41L10 12.67l5.59-5.59L17 8.5l-7 7z" fill="#fff" />
           </svg>
           <span>Ambiente Seguro</span>
         </div>
@@ -1496,7 +1696,7 @@
     <main class="wrap">
 
       <section class="hero">
-        <img src="img/bolsa_familia_logo.webp" alt="Imagem ilustrativa">
+        <img src="img/HeroFamilia.webp" alt="Imagem ilustrativa">
       </section>
 
       <section class="card">
@@ -1504,32 +1704,34 @@
         <!-- ✅ ADICIONADO: LOGO ACIMA DO TÍTULO -->
         <div class="brand-logo">
           <img src="img/Logo_Horizontal_NHP_Branco.webp" alt="Novo Horizonte Promotora" class="logo-nhp">
-          <img src="img/bolsa_familia_logo.webp" alt="Bolsa Família" class="logo-bolsa">
         </div>
 
-        <h1>
-          Crédito <span class="hl">Bolsa Família</span>:<br>
-          Rápido, fácil e sem complicação!
+        <h1 style="font-size: 32px;">
+          Empréstimo pessoal para <span class="hl">famílias</span>:<br>
+          <span style="font-size: 22px; font-weight: 700;">desconto mensal direto em conta.</span>
         </h1>
 
         <p class="sub">Pagamento facilitado com desconto direto no benefício. Sem burocracia.</p>
 
         <form id="formulario">
           <input type="text" id="nome" placeholder="✦ Nome completo" required autofocus>
-          <div id="erro-nome" style="color: #ff6b6b; font-size: 12px; margin-top: -8px; display: none;">Use apenas letras no nome</div>
-          
+          <div id="erro-nome" style="color: #ff6b6b; font-size: 12px; margin-top: -8px; display: none;">Use apenas
+            letras no nome</div>
+
           <input type="text" id="cpf" inputmode="numeric" placeholder="✦ CPF" maxlength="14" required>
-          <div id="erro-cpf" style="color: #ff6b6b; font-size: 12px; margin-top: -8px; display: none;">CPF inválido</div>
-          
+          <div id="erro-cpf" style="color: #ff6b6b; font-size: 12px; margin-top: -8px; display: none;">CPF inválido
+          </div>
+
           <div class="phone-group">
             <span class="phone-prefix">+55</span>
             <input type="tel" id="ddd" inputmode="numeric" placeholder="DDD" maxlength="2" required>
             <input type="tel" id="numero" inputmode="numeric" placeholder="Número" maxlength="10" required>
           </div>
-          <div id="erro-telefone" style="color: #ff6b6b; font-size: 12px; margin-top: -8px; display: none;">Preencha DDD e número corretamente</div>
+          <div id="erro-telefone" style="color: #ff6b6b; font-size: 12px; margin-top: -8px; display: none;">Preencha DDD
+            e número corretamente</div>
 
           <button class="cta" type="submit">
-             Simular Agora
+            Simular Agora
           </button>
         </form>
 
@@ -1551,7 +1753,7 @@
       <div class="page2-grid">
         <!-- ✅ AGORA É SÓ CONTEÚDO CENTRALIZADO (SEM FOTO) -->
         <div class="p2-content">
-          <h2 class="p2-title" id="duvidas">Posso solicitar o crédito?</h2>
+          <h2 class="p2-title" id="duvidas">Como solicitar?</h2>
           <p class="p2-sub">
             Confira abaixo se você atende aos requisitos para seguir com a simulação:
           </p>
@@ -1559,15 +1761,11 @@
           <ul class="reqs">
             <li>
               <div class="check">✓</div>
-              <div class="req-text">Receber no mínimo <strong>R$400</strong> de benefício.</div>
+              <div class="req-text">Ser beneficiário <strong>Bolsa Família.</strong></div>
             </li>
             <li>
               <div class="check">✓</div>
-              <div class="req-text">Ter o <strong>CADÚNICO</strong> atualizado.</div>
-            </li>
-            <li>
-              <div class="check">✓</div>
-              <div class="req-text">Sem <strong>descontos ativos</strong> no benefício.</div>
+              <div class="req-text">Receber no mínimo <strong>R$ 400,00</strong> de benfeício.</div>
             </li>
             <li>
               <div class="check">✓</div>
@@ -1576,102 +1774,142 @@
           </ul>
 
           <div class="trust-row">
-            <div class="trust-pill">Atendimento humanizado</div>
-            <div class="trust-pill">Simulação rápida</div>
-            <div class="trust-pill">Processo claro e direto</div>
+            <div class="trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h4>Atendimento humanizado</h4>
+              <p>Nossa equipe está sempre pronta para tirar suas dúvidas com carinho.</p>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <h4>Simulação rápida</h4>
+              <p>Saiba exatamente quanto você pode receber em poucos minutos e sem complicações.</p>
+            </div>
+            <div class="trust-card">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h4>Processo claro e direto</h4>
+              <p>Sem letras miúdas. Explicamos todas as condições de forma 100% transparente.</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="p2-cta">
-        <h3>Seu crédito começa aqui</h3>
-        <p>Solicite sua simulação com quem entende suas necessidades. Leva poucos minutos.</p>
-        <a href="#topo"> FAÇA AGORA MESMO<span aria-hidden="true"> →</span></a>
-      </div>
 
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <!-- Coluna 1: Brand -->
-            <div class="footer-brand">
-                <img src="img/Logo_Horizontal_NHP_Branco.webp" alt="Novo Horizonte Promotora" class="footer-logo" />
-                <p>
-                    Crédito com atendimento simples, direto e transparente.
-                </p>
-                <p style="font-size: 13px; opacity: 0.8;">
-                    As condições podem variar conforme análise e regras vigentes.
-                </p>
+      <div class="footer-content">
+        <!-- Coluna 1: Brand -->
+        <div class="footer-brand">
+          <img src="img/Logo_Horizontal_NHP_Branco.webp" alt="Novo Horizonte Promotora" class="footer-logo" />
+          <p>
+            Crédito com atendimento simples, direto e transparente.
+          </p>
+          <p style="font-size: 13px; opacity: 0.8;">
+            As condições podem variar conforme análise e regras vigentes.
+          </p>
 
-                <!-- Redes Sociais -->
-                <div class="social-media">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/novohorizontepromotoraa" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@novohorizontepromotora" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/novohorizontepromotora/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-                            </svg>
-                        </a>
-                        <a href="https://br.linkedin.com/company/novohorizontepromotora" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+          <!-- Redes Sociais -->
+          <div class="social-media">
+            <h4>Redes Sociais</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/novohorizontepromotoraa" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@novohorizontepromotora" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/novohorizontepromotora/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                </svg>
+              </a>
+              <a href="https://br.linkedin.com/company/novohorizontepromotora" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
             </div>
-
-            <!-- Coluna 2: Endereço -->
-            <div class="footer-section">
-                <h3>Endereço</h3>
-                <p>
-                    <strong>Avenida Lédio João Martins</strong><br>
-                    554 | Sala 402 Kobrasol<br>
-                    São José - SC | CEP: 88101-100
-                </p>
-                <p style="margin-top: 20px; font-size: 13px; opacity: 0.85;">
-                    Preencha o formulário para receber retorno com orientações.
-                </p>
-            </div>
-
-            <!-- Coluna 3: Informações -->
-            <div class="footer-section">
-                <h3>Informações</h3>
-                <p>
-                    Este site é destinado à simulação e contato comercial.
-                </p>
-                <p>
-                    Seus dados são tratados com responsabilidade e conformidade.
-                </p>
-                <p>
-                    Consulte nossa equipe para detalhes do seu caso.
-                </p>
-            </div>
+          </div>
         </div>
 
-        <!-- Rodapé inferior -->
-        <div class="footer-bottom">
-            <p>© <span id="year"></span> Novo Horizonte Promotora © Todos os direitos reservados / CNPJ: 43.758.973/0001-05.</p>
-            <p>Desenvolvido para atendimento e simulação.</p>
+        <!-- Coluna 2: Endereço -->
+        <div class="footer-section">
+          <h3>Endereço</h3>
+          <p>
+            <strong>Av. Marinheiro Max Schramm</strong><br>
+            3722 | Jardim Atlântico<br>
+            Florianópolis - SC | CEP: 88101-100
+          </p>
+          <p style="margin-top: 20px; font-size: 13px; opacity: 0.85;">
+            Preencha o formulário para receber retorno com orientações.
+          </p>
         </div>
 
-        <!-- Aviso Legal -->
-        <div class="footer-legal">
-            <p>
-                A NOVO HORIZONTE atua como correspondente bancário para facilitar a contratação de empréstimos, seguindo as diretrizes do Banco Central do Brasil, conforme a Resolução nº 4.935, de 29 de julho de 2021. A NOVO HORIZONTE PROMOTORA não é uma instituição financeira e não possui vínculo regulatório com o Banco Central, não intermedia financiamentos, não concede crédito, e não recebe juros. A avaliação de crédito será realizada de acordo com a política da Instituição Financeira escolhida pelo usuário. Antes da contratação, você receberá todas as condições e informações relativas ao produto de forma completa e transparente. As taxas de juros, margem consignável e prazo de pagamento nos empréstimos consignados observam as determinações de cada convênio e a política de crédito da instituição financeira utilizada.
-            </p>
+        <!-- Coluna 3: Informações -->
+        <div class="footer-section">
+          <h3>Informações</h3>
+          <p>
+            Este site é destinado à simulação e contato comercial.
+          </p>
+          <p>
+            Seus dados são tratados com responsabilidade e conformidade.
+          </p>
+          <p>
+            Consulte nossa equipe para detalhes do seu caso.
+          </p>
         </div>
+      </div>
+
+      <!-- Rodapé inferior -->
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Novo Horizonte Promotora © Todos os direitos reservados / CNPJ: 43.758.973/0001-05.
+        </p>
+        <p>Desenvolvido para atendimento e simulação.</p>
+      </div>
+
+      <!-- Aviso Legal -->
+      <div class="footer-legal">
+        <p>
+          A NOVO HORIZONTE atua como correspondente bancário para facilitar a contratação de empréstimos, seguindo as
+          diretrizes do Banco Central do Brasil, conforme a Resolução nº 4.935, de 29 de julho de 2021. A NOVO HORIZONTE
+          PROMOTORA não é uma instituição financeira e não possui vínculo regulatório com o Banco Central, não
+          intermedia financiamentos, não concede crédito, e não recebe juros. A avaliação de crédito será realizada de
+          acordo com a política da Instituição Financeira escolhida pelo usuário. Antes da contratação, você receberá
+          todas as condições e informações relativas ao produto de forma completa e transparente. As taxas de juros,
+          margem consignável e prazo de pagamento nos empréstimos consignados observam as determinações de cada convênio
+          e a política de crédito da instituição financeira utilizada.
+        </p>
+      </div>
     </footer>
   </section>
 
@@ -1690,7 +1928,7 @@
       return false;
     }
 
-    (function() {
+    (function () {
       var overlay = document.getElementById('tiktokOverlay');
       if (isInAppBrowser()) {
         overlay.classList.add('active');
@@ -1733,7 +1971,7 @@
             value: normalized,
             timestamp: Date.now()
           }));
-        } catch (e) {}
+        } catch (e) { }
         return normalized;
       }
 
@@ -1748,7 +1986,7 @@
           // Expirou → remove
           localStorage.removeItem("ab");
         }
-      } catch (e) {}
+      } catch (e) { }
 
       // Nada na URL e nada válido no localStorage → padrão ab0
       return defaultAb;
@@ -1763,7 +2001,7 @@
     const N8N_WEBHOOK_URL = "https://webhook.novohorizontepromotora.com.br/webhook/fd367db7-f312-42ed-b239-8daf87d39c23";
     const DATACRAZY_API_URL = "https://api.g1.datacrazy.io/api/v1/leads";
     const DATACRAZY_TOKEN = "Bearer dc_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjljMjU1Mzk0NGQ3Mjg2MjQ3ZGEwNyIsInRlbmFudElkIjoiMDZiZmUyZjQtOTA0NC00YWY0LTgxMjMtMGQ5MzZkZjEwNmJjIiwibmFtZSI6IkZPUk1VTEFSSU8gQVBST1ZBRE8gQk9MU0EiLCJpYXQiOjE3NjQzNDQ0MDV9.8SXzxzLoJ9ZTozVO2QBXmp_Ym2u1aFHfVemh33uCX9Y";
-    
+
     // Parceiro dinâmico baseado no código AB
     // ab1 → "ANUNCIO 1 BOLSA", ab2 → "ANUNCIO 2 BOLSA", etc.
     const PARCEIRO = (() => {
@@ -1771,7 +2009,7 @@
       const num = ab.replace(/^ab/i, ""); // extrai só o número
       return `ANUNCIO ${num} BOLSA`;
     })();
-    
+
     // ===== CAPTURA DE PARÂMETROS DE RASTREAMENTO =====
     function getTrackingParams() {
       const urlParams = new URLSearchParams(window.location.search);
@@ -1782,24 +2020,24 @@
       }
 
       return {
-        utm_source:   urlParams.get('utm_source')   || '',
+        utm_source: urlParams.get('utm_source') || '',
         utm_campaign: urlParams.get('utm_campaign') || '',
-        utm_medium:   urlParams.get('utm_medium')   || '',
-        utm_content:  urlParams.get('utm_content')  || '',
-        utm_term:     urlParams.get('utm_term')     || '',
-        gclid:        urlParams.get('gclid')        || '',
-        fbp:          getCookie('_fbp')              || '',
-        fbc:          getCookie('_fbc') || (urlParams.get('fbclid') ? 'fb.1.' + Date.now() + '.' + urlParams.get('fbclid') : ''),
-        ttclid:       urlParams.get('ttclid')        || '',
-        ttp:          getCookie('_ttp')              || '',
-        user_agent:   navigator.userAgent            || '',
+        utm_medium: urlParams.get('utm_medium') || '',
+        utm_content: urlParams.get('utm_content') || '',
+        utm_term: urlParams.get('utm_term') || '',
+        gclid: urlParams.get('gclid') || '',
+        fbp: getCookie('_fbp') || '',
+        fbc: getCookie('_fbc') || (urlParams.get('fbclid') ? 'fb.1.' + Date.now() + '.' + urlParams.get('fbclid') : ''),
+        ttclid: urlParams.get('ttclid') || '',
+        ttp: getCookie('_ttp') || '',
+        user_agent: navigator.userAgent || '',
       };
     }
 
     // Captura ao carregar e salva em localStorage (com expiração de 7 dias) para não perder
     const trackingParams = (() => {
       const params = getTrackingParams();
-      const keys = ['utm_source','utm_campaign','utm_medium','utm_content','utm_term','gclid','fbp','fbc','ttclid','ttp','user_agent'];
+      const keys = ['utm_source', 'utm_campaign', 'utm_medium', 'utm_content', 'utm_term', 'gclid', 'fbp', 'fbc', 'ttclid', 'ttp', 'user_agent'];
       const EXPIRY_DAYS = 7;
       const STORAGE_KEY = 'trk_params';
 
@@ -1815,7 +2053,7 @@
             localStorage.removeItem(STORAGE_KEY);
           }
         }
-      } catch (e) {}
+      } catch (e) { }
 
       // Se a URL tem algum parâmetro UTM, atualiza tudo no localStorage
       const hasNewUtm = keys.some(k => !!params[k] && k !== 'user_agent');
@@ -1829,7 +2067,7 @@
             data: toSave,
             timestamp: Date.now()
           }));
-        } catch (e) {}
+        } catch (e) { }
         stored = toSave;
       }
 
@@ -1877,24 +2115,24 @@
     }
 
     // ========== VALIDAÇÃO E FORMATAÇÃO DO FORMULÁRIO ==========
-    
+
     const nomeInput = document.getElementById('nome');
     const cpfInput = document.getElementById('cpf');
     const dddInput = document.getElementById('ddd');
     const numeroInput = document.getElementById('numero');
     const formulario = document.getElementById('formulario');
-    
+
     const erroNome = document.getElementById('erro-nome');
     const erroCpf = document.getElementById('erro-cpf');
     const erroTelefone = document.getElementById('erro-telefone');
 
     // ===== NOME: Apenas letras e espaços =====
-    nomeInput.addEventListener('input', function(e) {
+    nomeInput.addEventListener('input', function (e) {
       let valor = e.target.value;
-      
+
       // Remove números e caracteres especiais, mantém letras (com acentos) e espaços
       const valorLimpo = valor.replace(/[^a-záàâãéèêíïóôõöúçñA-ZÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ\s]/g, '');
-      
+
       if (valor !== valorLimpo) {
         e.target.value = valorLimpo;
         erroNome.style.display = 'block';
@@ -1907,12 +2145,12 @@
     // ===== CPF: Validação e formatação =====
     function validarCPF(cpf) {
       cpf = cpf.replace(/\D/g, ''); // Remove tudo que não é dígito
-      
+
       if (cpf.length !== 11) return false;
-      
+
       // Verifica se todos os dígitos são iguais
       if (/^(\d)\1{10}$/.test(cpf)) return false;
-      
+
       // Validação do primeiro dígito verificador
       let soma = 0;
       for (let i = 0; i < 9; i++) {
@@ -1921,7 +2159,7 @@
       let resto = (soma * 10) % 11;
       if (resto === 10 || resto === 11) resto = 0;
       if (resto !== parseInt(cpf.charAt(9))) return false;
-      
+
       // Validação do segundo dígito verificador
       soma = 0;
       for (let i = 0; i < 10; i++) {
@@ -1930,7 +2168,7 @@
       resto = (soma * 10) % 11;
       if (resto === 10 || resto === 11) resto = 0;
       if (resto !== parseInt(cpf.charAt(10))) return false;
-      
+
       return true;
     }
 
@@ -1942,19 +2180,19 @@
       return valor;
     }
 
-    cpfInput.addEventListener('input', function(e) {
+    cpfInput.addEventListener('input', function (e) {
       let valor = e.target.value;
-      
+
       // Remove tudo que não é número
       let apenasNumeros = valor.replace(/\D/g, '');
-      
+
       // Formata o CPF
       e.target.value = formatarCPF(apenasNumeros);
     });
 
-    cpfInput.addEventListener('blur', function(e) {
+    cpfInput.addEventListener('blur', function (e) {
       let cpf = e.target.value.replace(/\D/g, '');
-      
+
       if (cpf.length > 0) {
         if (!validarCPF(cpf)) {
           erroCpf.style.display = 'block';
@@ -1966,13 +2204,13 @@
       }
     });
 
-    cpfInput.addEventListener('focus', function(e) {
+    cpfInput.addEventListener('focus', function (e) {
       erroCpf.style.display = 'none';
       e.target.style.borderColor = '';
     });
 
     // ===== TELEFONE: DDD + Número (campos separados, somente dígitos) =====
-    dddInput.addEventListener('input', function(e) {
+    dddInput.addEventListener('input', function (e) {
       e.target.value = e.target.value.replace(/\D/g, '').slice(0, 2);
       // Auto-avança para o campo número ao completar 2 dígitos
       if (e.target.value.length === 2) {
@@ -1980,7 +2218,7 @@
       }
     });
 
-    numeroInput.addEventListener('input', function(e) {
+    numeroInput.addEventListener('input', function (e) {
       let digits = e.target.value.replace(/\D/g, '').slice(0, 9);
       // Formata: 9xxxx-xxxx
       if (digits.length > 5) {
@@ -1992,7 +2230,7 @@
     // ===== CRIAR LEAD NO DATACRAZY =====
     function criarLeadDataCrazy(nome, telefoneCompleto, cpfDigits) {
       const telefoneNumerico = "55" + telefoneCompleto;
-      
+
       fetch(DATACRAZY_API_URL, {
         method: "POST",
         headers: {
@@ -2005,21 +2243,21 @@
           taxId: cpfDigits,
           company: PARCEIRO,
           // Parâmetros de rastreamento
-          utm_source:   trackingParams.utm_source,
+          utm_source: trackingParams.utm_source,
           utm_campaign: trackingParams.utm_campaign,
-          utm_medium:   trackingParams.utm_medium,
-          utm_content:  trackingParams.utm_content,
-          gclid:        trackingParams.gclid,
-          fbp:          trackingParams.fbp,
-          fbc:          trackingParams.fbc,
-          ttclid:       trackingParams.ttclid,
-          ttp:          trackingParams.ttp,
-          user_agent:   trackingParams.user_agent,
+          utm_medium: trackingParams.utm_medium,
+          utm_content: trackingParams.utm_content,
+          gclid: trackingParams.gclid,
+          fbp: trackingParams.fbp,
+          fbc: trackingParams.fbc,
+          ttclid: trackingParams.ttclid,
+          ttp: trackingParams.ttp,
+          user_agent: trackingParams.user_agent,
         }),
       })
-      .then((response) => response.json())
-      .then(() => {})
-      .catch(() => {});
+        .then((response) => response.json())
+        .then(() => { })
+        .catch(() => { });
     }
 
     // ===== MOSTRAR LOADER =====
@@ -2074,17 +2312,17 @@
           <div class="message-icon">😉</div>
           <h2 class="message-title" style="color:#28a745;">Tudo certo!</h2>
           <p class="message-text">
-            ${emHorario 
-              ? `Um especialista entrará em contato pelo WhatsApp com sua proposta.`
-              : `Recebemos seus dados com sucesso!`
-            }
+            ${emHorario
+          ? `Um especialista entrará em contato pelo WhatsApp com sua proposta.`
+          : `Recebemos seus dados com sucesso!`
+        }
           </p>
           <div class="${emHorario ? 'status-online' : 'status-offline'}">
             <span style="font-size:18px;">●</span>
-            ${emHorario 
-              ? `${especialistas} especialistas online agora!`
-              : `Fora do horário comercial - Segunda à sexta, das 9h às 18h`
-            }
+            ${emHorario
+          ? `${especialistas} especialistas online agora!`
+          : `Fora do horário comercial - Segunda à sexta, das 9h às 18h`
+        }
           </div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-img" />
           <p class="message-text" style="font-weight:800; margin-top:15px;">Aguarde nossa mensagem no WhatsApp!</p>
@@ -2093,11 +2331,11 @@
     }
 
     // ===== VALIDAÇÃO DO FORMULÁRIO =====
-    formulario.addEventListener('submit', async function(e) {
+    formulario.addEventListener('submit', async function (e) {
       e.preventDefault();
-      
+
       let valido = true;
-      
+
       // Valida nome
       if (nomeInput.value.trim().length < 3) {
         erroNome.textContent = 'Digite seu nome completo';
@@ -2106,7 +2344,7 @@
       } else {
         erroNome.style.display = 'none';
       }
-      
+
       // Valida CPF
       let cpfDigits = cpfInput.value.replace(/\D/g, '');
       if (!validarCPF(cpfDigits)) {
@@ -2117,7 +2355,7 @@
         erroCpf.style.display = 'none';
         cpfInput.style.borderColor = '';
       }
-      
+
       // Valida telefone (DDD 2 dígitos + Número 8 ou 9 dígitos)
       let dddDigits = dddInput.value.replace(/\D/g, '');
       let numDigits = numeroInput.value.replace(/\D/g, '');
@@ -2128,7 +2366,7 @@
       } else {
         erroTelefone.style.display = 'none';
       }
-      
+
       if (!valido) return;
 
       // Desabilita o botão de submit
@@ -2157,17 +2395,17 @@
             nome: nome,
             parceiro: PARCEIRO,
             // Parâmetros de rastreamento
-            utm_source:   trackingParams.utm_source,
+            utm_source: trackingParams.utm_source,
             utm_campaign: trackingParams.utm_campaign,
-            utm_medium:   trackingParams.utm_medium,
-            utm_content:  trackingParams.utm_content,
-            utm_term:     trackingParams.utm_term,
-            gclid:        trackingParams.gclid,
-            fbp:          trackingParams.fbp,
-            fbc:          trackingParams.fbc,
-            ttclid:       trackingParams.ttclid,
-            ttp:          trackingParams.ttp,
-            user_agent:   trackingParams.user_agent,
+            utm_medium: trackingParams.utm_medium,
+            utm_content: trackingParams.utm_content,
+            utm_term: trackingParams.utm_term,
+            gclid: trackingParams.gclid,
+            fbp: trackingParams.fbp,
+            fbc: trackingParams.fbc,
+            ttclid: trackingParams.ttclid,
+            ttp: trackingParams.ttp,
+            user_agent: trackingParams.user_agent,
           }),
         });
 
@@ -2234,4 +2472,5 @@
   </script>
 
 </body>
+
 </html>
