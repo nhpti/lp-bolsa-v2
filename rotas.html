@@ -61,7 +61,8 @@
             if (!cleanName || !codigo) continue;
             
             const alias = cleanName + codigo.toLowerCase();
-            const targetUrl = `https://seusite.com.br/?origem=${codigo}`;
+            const baseUrl = window.location.origin + window.location.pathname.replace('rotas.html', '');
+            const targetUrl = `${baseUrl}?origem=${codigo}`;
             
             const tr = document.createElement('tr');
             tr.innerHTML = `
