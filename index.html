@@ -1707,7 +1707,7 @@
         </div>
 
         <h1 style="font-size: 32px;">
-          Empréstimo pessoal para <span class="hl">famílias</span>!<br>
+          Empréstimo pessoal para <span class="hl">baixa renda</span>!<br>
           <span style="font-size: 22px; font-weight: 700;">Desconto mensal direto em conta.</span>
         </h1>
 
@@ -1766,10 +1766,6 @@
             <li>
               <div class="check">✓</div>
               <div class="req-text">Receber no mínimo <strong>R$ 400,00</strong> de benfeício.</div>
-            </li>
-            <li>
-              <div class="check">✓</div>
-              <div class="req-text">Receber o benefício pelo <strong>Caixa Tem</strong>.</div>
             </li>
           </ul>
 
@@ -1954,20 +1950,20 @@
       }
     });
 
-    // ========== RASTREAMENTO DE ORIGEM (AB) ==========
+    // ========== RASTREAMENTO DE ORIGEM (ORIGEM / AB) ==========
     function getAbCode() {
-      const defaultAb = "ab0";
+      const defaultAb = "nhp";
       const EXPIRY_DAYS = 7;
       const params = new URLSearchParams(window.location.search);
-      const raw = params.get("ab");
+      const raw = params.get("origem") || params.get("ab");
 
-      const isValid = (v) => typeof v === "string" && /^ab\d+$/i.test(v);
+      const isValid = (v) => typeof v === "string" && v.trim().length > 0;
 
-      // Se veio ?ab= na URL → usa esse valor e salva no localStorage com data
+      // Se veio parâmetro na URL → usa esse valor e salva no localStorage com data
       if (isValid(raw)) {
-        const normalized = raw.toLowerCase();
+        const normalized = raw.trim().toLowerCase();
         try {
-          localStorage.setItem("ab", JSON.stringify({
+          localStorage.setItem("origem_code", JSON.stringify({
             value: normalized,
             timestamp: Date.now()
           }));
@@ -1977,18 +1973,18 @@
 
       // Sem código na URL → tenta recuperar do localStorage (se não expirou)
       try {
-        const stored = JSON.parse(localStorage.getItem("ab"));
+        const stored = JSON.parse(localStorage.getItem("origem_code")) || JSON.parse(localStorage.getItem("ab"));
         if (stored && isValid(stored.value)) {
           const ageInDays = (Date.now() - stored.timestamp) / (1000 * 60 * 60 * 24);
           if (ageInDays <= EXPIRY_DAYS) {
             return stored.value.toLowerCase();
           }
           // Expirou → remove
-          localStorage.removeItem("ab");
+          localStorage.removeItem("origem_code");
         }
       } catch (e) { }
 
-      // Nada na URL e nada válido no localStorage → padrão ab0
+      // Padrão
       return defaultAb;
     }
 
@@ -2002,12 +1998,10 @@
     const DATACRAZY_API_URL = "https://api.g1.datacrazy.io/api/v1/leads";
     const DATACRAZY_TOKEN = "Bearer dc_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MjljMjU1Mzk0NGQ3Mjg2MjQ3ZGEwNyIsInRlbmFudElkIjoiMDZiZmUyZjQtOTA0NC00YWY0LTgxMjMtMGQ5MzZkZjEwNmJjIiwibmFtZSI6IkZPUk1VTEFSSU8gQVBST1ZBRE8gQk9MU0EiLCJpYXQiOjE3NjQzNDQ0MDV9.8SXzxzLoJ9ZTozVO2QBXmp_Ym2u1aFHfVemh33uCX9Y";
 
-    // Parceiro dinâmico baseado no código AB
-    // ab1 → "ANUNCIO 1 BOLSA", ab2 → "ANUNCIO 2 BOLSA", etc.
+    // Parceiro dinâmico baseado no código de origem
     const PARCEIRO = (() => {
-      const ab = getAbCode(); // ex: "ab1", "ab2", "ab15"
-      const num = ab.replace(/^ab/i, ""); // extrai só o número
-      return `ANUNCIO ${num} BOLSA`;
+      const origem = getAbCode();
+      return origem.toUpperCase();
     })();
 
     // ===== CAPTURA DE PARÂMETROS DE RASTREAMENTO =====

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Rotas de Origem</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; }
+    h1 { color: #38bdf8; margin-bottom: 5px; }
+    p { color: #94a3b8; margin-top: 0; }
+    input { width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #334155; background: #1e293b; color: #fff; font-size: 16px; }
+    table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #334155; }
+    th { background: #334155; color: #f1f5f9; }
+    tr:hover { background: rgba(51, 65, 85, 0.5); }
+    .badge { background: #0284c7; color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-family: monospace; }
+    .url { font-family: monospace; color: #38bdf8; }
+    button { background: #38bdf8; color: #0f172a; border: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    button:hover { background: #7dd3fc; }
+  </style>
+</head>
+<body>
+  <h1>Catálogo de Links de Origem</h1>
+  <p>Consulte e copie a URL de destino para criar ou editar cada encurtador no Curtlink.</p>
+  
+  <input type="text" id="search" placeholder="Buscar parceiro ou código..." onkeyup="filterTable()">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Parceiro</th>
+        <th>Código Origem</th>
+        <th>Sugestão de Alias no Curtlink</th>
+        <th>URL de Destino (para colar no Curtlink)</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <script>
+    fetch('influencers_codigos.csv')
+      .then(res => res.text())
+      .then(text => {
+        const lines = text.split('\n');
+        const tbody = document.getElementById('tableBody');
+        
+        for (let i = 1; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if (!line) continue;
+          const cols = line.split(',');
+          if (cols.length >= 4) {
+            const codigo = cols[1].trim();
+            const nome = cols[2].trim().replace(/"/g, '');
+            const tipo = cols[3].trim();
+            
+            if (tipo === 'TRAFEGO' || tipo === 'REMARKETING') continue;
+            
+            const cleanName = nome.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            if (!cleanName || !codigo) continue;
+            
+            const alias = cleanName + codigo.toLowerCase();
+            const targetUrl = `https://seusite.com.br/?origem=${codigo}`;
+            
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td><strong>${nome}</strong></td>
+              <td><span class="badge">${codigo}</span></td>
+              <td><code>${alias}</code></td>
+              <td class="url">${targetUrl}</td>
+              <td><button onclick="navigator.clipboard.writeText('${targetUrl}')">Copiar URL</button></td>
+            `;
+            tbody.appendChild(tr);
+          }
+        }
+      });
+
+    function filterTable() {
+      const q = document.getElementById('search').value.toLowerCase();
+      const rows = document.querySelectorAll('#tableBody tr');
+      rows.forEach(r => {
+        r.style.display = r.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
