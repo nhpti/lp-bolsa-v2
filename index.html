@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+  <base href="/" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bolsa Família - Novo Horizonte Promotora</title>
@@ -1950,16 +1951,67 @@
       }
     });
 
-    // ========== RASTREAMENTO DE ORIGEM (ORIGEM / AB) ==========
+    // ========== MAPEAMENTO DE PARCEIROS E CANAIS ==========
+    const PARCEIROS_MAP = {
+      arrais: {
+        codigoPadrao: "j5",
+        canais: {
+          "ia1": "ia1",
+          "jt1": "jt1",
+          "jy1": "jy1",
+          "j5": "j5",
+          "instagram": "ia1",
+          "tiktok": "jt1",
+          "youtube": "jy1"
+        }
+      }
+    };
+
+    // ========== RASTREAMENTO DE ORIGEM (ROTAS / URL / LOCALSTORAGE) ==========
     function getAbCode() {
       const defaultAb = "nhp";
       const EXPIRY_DAYS = 7;
-      const params = new URLSearchParams(window.location.search);
-      const raw = params.get("origem") || params.get("ab");
 
-      const isValid = (v) => typeof v === "string" && v.trim().length > 0;
+      // 1. Tenta extrair da rota da URL (ex: /arrais/ia1 ou /arrais)
+      let codeFromPath = null;
+      try {
+        const pathSegments = window.location.pathname
+          .toLowerCase()
+          .split('/')
+          .filter(Boolean); // remove strings vazias
 
-      // Se veio parâmetro na URL → usa esse valor e salva no localStorage com data
+        if (pathSegments.length > 0) {
+          const first = pathSegments[0];
+          // Ignora arquivos estáticos como rotas.html ou index.html
+          if (!first.endsWith('.html') && !first.endsWith('.json') && !first.endsWith('.csv')) {
+            if (PARCEIROS_MAP[first]) {
+              const parceiro = PARCEIROS_MAP[first];
+              if (pathSegments.length >= 2 && pathSegments[1]) {
+                const sub = pathSegments[1];
+                codeFromPath = parceiro.canais && parceiro.canais[sub] ? parceiro.canais[sub] : sub;
+              } else {
+                codeFromPath = parceiro.codigoPadrao;
+              }
+            } else if (pathSegments.length >= 2) {
+              // Rota genérica para outros parceiros: /parceiro/codigo
+              codeFromPath = pathSegments[1];
+            }
+          }
+        }
+      } catch (e) { }
+
+      // 2. Tenta extrair de parâmetros da URL (?origem=... ou ?ab=...)
+      let codeFromQuery = null;
+      try {
+        const params = new URLSearchParams(window.location.search);
+        codeFromQuery = params.get("origem") || params.get("ab");
+      } catch (e) { }
+
+      // Prioridade: Query param explícito > Rota no pathname
+      const raw = codeFromQuery || codeFromPath;
+      const isValid = (v) => typeof v === "string" && v.trim().length > 0 && !v.endsWith('.html');
+
+      // Se veio código na URL atual → salva no localStorage
       if (isValid(raw)) {
         const normalized = raw.trim().toLowerCase();
         try {
@@ -1971,7 +2023,7 @@
         return normalized;
       }
 
-      // Sem código na URL → tenta recuperar do localStorage (se não expirou)
+      // 3. Sem código na URL → tenta recuperar do localStorage (se não expirou)
       try {
         const stored = JSON.parse(localStorage.getItem("origem_code")) || JSON.parse(localStorage.getItem("ab"));
         if (stored && isValid(stored.value)) {
@@ -1979,12 +2031,11 @@
           if (ageInDays <= EXPIRY_DAYS) {
             return stored.value.toLowerCase();
           }
-          // Expirou → remove
           localStorage.removeItem("origem_code");
         }
       } catch (e) { }
 
-      // Padrão
+      // 4. Fallback padrão
       return defaultAb;
     }
 
