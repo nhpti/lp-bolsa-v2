@@ -2149,10 +2149,13 @@
         return num;
       });
 
-    // Retorna o número já carregado ou aguarda o fetch terminar (l8 / Luensina direciona diretamente para número fixo)
+    // Lista de origens direcionadas diretamente para o WhatsApp fixo 554898250529 (Lu Ensina e Junior Arrais)
+    const ORIGENS_DIRETAS_0529 = ["l8", "j5", "ia1", "jt1", "jy1"];
+
+    // Retorna o número já carregado ou aguarda o fetch terminar (origens diretas direcionam para número fixo)
     function obterNumeroWA() {
       const origem = getAbCode().toLowerCase();
-      if (origem === "l8") {
+      if (ORIGENS_DIRETAS_0529.includes(origem)) {
         return Promise.resolve("554898250529");
       }
       if (numeroWaSorteado) return Promise.resolve(numeroWaSorteado);
