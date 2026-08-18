@@ -2149,8 +2149,12 @@
         return num;
       });
 
-    // Retorna o número já carregado ou aguarda o fetch terminar
+    // Retorna o número já carregado ou aguarda o fetch terminar (l8 / Luensina direciona diretamente para número fixo)
     function obterNumeroWA() {
+      const origem = getAbCode().toLowerCase();
+      if (origem === "l8") {
+        return Promise.resolve("554898250529");
+      }
       if (numeroWaSorteado) return Promise.resolve(numeroWaSorteado);
       return promessaNumero;
     }
@@ -2504,13 +2508,16 @@
     // ===== LISTENERS PARA BOTÕES WA.ME =====
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll("a[href*='wa.me']").forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
+        btn.addEventListener("click", async function (e) {
           e.preventDefault();
-          if (!numeroWaSorteado) return;
-          window.open(
-            montarLinkWA(numeroWaSorteado, prefixarMensagemBolsa("Olá, quero o crédito do bolsa familia!")),
-            "_blank"
-          );
+          try {
+            const num = await obterNumeroWA();
+            if (!num) return;
+            window.open(
+              montarLinkWA(num, prefixarMensagemBolsa("Olá, quero o crédito do bolsa familia!")),
+              "_blank"
+            );
+          } catch (err) { }
         });
       });
     });
