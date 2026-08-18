@@ -79,6 +79,22 @@
     </div>
   </div>
 
+  <div class="card-highlight">
+    <h2>⚡ Link Direto (Lu Ensina)</h2>
+    <p>Link pronto para entregar à parceira Lu Ensina:</p>
+    
+    <div class="grid-links">
+      <div class="link-item">
+        <div class="link-header">
+          <span>Link Principal (l8)</span>
+          <span class="channel-tag tag-geral">Todos os Canais</span>
+        </div>
+        <div class="url-display" id="url-luensina">https://bolsafamilia.novohorizontepromotora.com.br/luensina/l8</div>
+        <button onclick="copiarTexto('url-luensina', this)">Copiar Link da Lu Ensina</button>
+      </div>
+    </div>
+  </div>
+
   <h2>📋 Todos os Parceiros (Tabela Geral)</h2>
   <input type="text" id="search" placeholder="Buscar parceiro ou código..." onkeyup="filterTable()">
 
@@ -100,6 +116,10 @@
     function copiarTexto(elementId, btn) {
       const el = document.getElementById(elementId);
       const text = el.innerText || el.textContent;
+      copiarValor(text, btn);
+    }
+
+    function copiarValor(text, btn) {
       navigator.clipboard.writeText(text).then(() => {
         const originalText = btn.textContent;
         btn.textContent = 'Copiado! ✓';
@@ -141,7 +161,7 @@
               <td><span class="badge">${codigo}</span></td>
               <td><code>${alias}</code></td>
               <td class="url">${targetUrl}</td>
-              <td><button onclick="navigator.clipboard.writeText('${targetUrl}')">Copiar URL</button></td>
+              <td><button onclick="copiarValor('${targetUrl}', this)">Copiar URL</button></td>
             `;
             tbody.appendChild(tr);
           }
