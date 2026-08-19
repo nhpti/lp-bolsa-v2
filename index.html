@@ -1967,12 +1967,28 @@
       }
     };
 
-    // ========== RASTREAMENTO DE ORIGEM (ROTAS / URL / LOCALSTORAGE) ==========
+    // ========== MAPEAMENTO DE SUBDOMÍNIOS ==========
+    const SUBDOMINIOS_MAP = {
+      "luensina.novohorizontepromotora.com.br": "l8"
+    };
+
+    // ========== RASTREAMENTO DE ORIGEM (SUBDOMÍNIOS / ROTAS / URL / LOCALSTORAGE) ==========
     function getAbCode() {
       const defaultAb = "nhp";
       const EXPIRY_DAYS = 7;
 
-      // 1. Tenta extrair da rota da URL (ex: /arrais/ia1 ou /arrais)
+      // 1. Tenta extrair do Subdomínio (ex: luensina.novohorizontepromotora.com.br -> l8)
+      let codeFromHost = null;
+      try {
+        const hostname = window.location.hostname.toLowerCase();
+        if (SUBDOMINIOS_MAP[hostname]) {
+          codeFromHost = SUBDOMINIOS_MAP[hostname];
+        } else if (hostname.startsWith("luensina.")) {
+          codeFromHost = "l8";
+        }
+      } catch (e) { }
+
+      // 2. Tenta extrair da rota da URL (ex: /arrais/ia1 ou /arrais)
       let codeFromPath = null;
       try {
         const pathSegments = window.location.pathname
@@ -2000,15 +2016,15 @@
         }
       } catch (e) { }
 
-      // 2. Tenta extrair de parâmetros da URL (?origem=... ou ?ab=...)
+      // 3. Tenta extrair de parâmetros da URL (?origem=... ou ?ab=...)
       let codeFromQuery = null;
       try {
         const params = new URLSearchParams(window.location.search);
         codeFromQuery = params.get("origem") || params.get("ab");
       } catch (e) { }
 
-      // Prioridade: Query param explícito > Rota no pathname
-      const raw = codeFromQuery || codeFromPath;
+      // Prioridade: Query param explícito > Rota no pathname > Subdomínio
+      const raw = codeFromQuery || codeFromPath || codeFromHost;
       const isValid = (v) => typeof v === "string" && v.trim().length > 0 && !v.endsWith('.html');
 
       // Se veio código na URL atual → salva no localStorage
