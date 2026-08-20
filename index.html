@@ -2478,13 +2478,21 @@
           webhookData = { retorno: "triagem", mensagem: "" };
         }
 
-        const status = webhookData.retorno || "indefinido";
-        const mensagem = webhookData.mensagem || "";
+        // Trata caso o n8n responda em formato array [{ ... }]
+        let payload = webhookData;
+        if (Array.isArray(payload) && payload.length > 0) {
+          payload = payload[0];
+        }
 
-        // Trata cada tipo de resposta
-        if (status === "reprovado") {
+        // Normaliza o status (remove espaços, caixa baixa e aceita retorno ou status)
+        const rawStatus = (payload && (payload.retorno || payload.status || "")) || "indefinido";
+        const status = String(rawStatus).trim().toLowerCase();
+        const mensagem = payload && payload.mensagem ? payload.mensagem : "";
+
+        // Trata cada tipo de resposta de forma segura
+        if (status === "reprovado" || status === "reprovada") {
           mostrarReprovado(mensagem);
-        } else if (status === "aprovado") {
+        } else if (status === "aprovado" || status === "aprovada") {
           criarLeadDataCrazy(nome, telefoneCompleto, cpfDigits);
           mostrarAprovado(mensagem);
           // Aguarda o número do Supabase (já resolvido ou ainda em andamento) e redireciona
